@@ -44,7 +44,7 @@ export default function Index() {
                     className=' absolute -inset-3  rounded-lg bg-gradient-to-r from-pink-500 to-purple-600 opacity-75 blur-xl transition duration-1000 group-hover:opacity-100 group-hover:duration-200'
                     aria-hidden='true'></div>
                   <Link
-                    to='/plugins'
+                    to='/products'
                     className=' relative rounded-lg bg-black px-7 py-4 leading-none text-gray-100'>
                     Shop Plugins!
                   </Link>
