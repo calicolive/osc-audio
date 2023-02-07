@@ -5,6 +5,14 @@ import { client } from '~/api/shopify';
 import { formatter } from '~/utils/formatprice';
 import { Link } from '@remix-run/react';
 
+export default function Index() {
+  const { products } = useLoaderData();
+
+  return <main className='bg-black min-h-screen'></main>;
+}
+
+// GraphQL query to get products from Shopify
+
 const getProducts = gql`
   {
     collection(handle: "frontpage") {
@@ -36,18 +44,9 @@ const getProducts = gql`
   }
 `;
 
+// Loader function to fetch product info from Shopify
 export const loader = async () => {
   const { collection } = await client.request(getProducts);
-  if (!collection) throw new Response('Something Went wrong', { status: 404 });
 
   return json(collection);
 };
-
-export default function Index() {
-  const { products } = useLoaderData();
-  console.log(products);
-  return (
-    <div
-      style={{ fontFamily: 'system-ui, sans-serif', lineHeight: '1.4' }}></div>
-  );
-}
