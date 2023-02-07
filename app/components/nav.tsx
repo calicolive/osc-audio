@@ -6,7 +6,7 @@ import { Dialog, Transition } from '@headlessui/react';
 const navigation = [
   { id: 1, name: 'Home', to: '/' },
   { id: 2, name: 'Freebies', to: '/freebies' },
-  { id: 3, name: 'Plugins', to: '/plugins' },
+  { id: 3, name: 'Plugins', to: '/products' },
 ];
 
 export default function Nav() {
